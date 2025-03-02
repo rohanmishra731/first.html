@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document
+    </title>
+</head>
+<style>/* Reset some default styles */
+    /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Basic body styling */
+    /* body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    } */
+    /* Navigation Bar Styling */
+    /* .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        border-radius: 12px;
+        /* max-width: 90%; */
+        /* margin: 20px auto; */
+        /* box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    } */ */
+    
+    /* .navbar .logo a {
+        color: #a11c1c;
+        font-size: 24px;
+        text-decoration: none;
+    } */
+/*     
+    .navbar .nav-links {
+        list-style-type: none;
+        display: flex;
+    } */
+    
+    /* .navbar .nav-links li {
+        margin: 0 15px;
+    } */
+    
+    /* .navbar .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    } */
+    
+    /* .navbar .nav-links a:hover {
+        color: #f8b400; /* Change color on hover */
+ } */
+    
+    /* .navbar .search-bar input {
+        padding: 5px;
+        font-size: 16px;
+    } */
+    
+    /* .navbar .search-bar button {
+        padding: 6px;
+        background-color: #f8b400;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    } */
+    
+    /* .navbar .search-bar button:hover {
+        background-color: #d78a00;
+    } */
+    /* .logo img {
+        height: 70px;
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }  */
+      /* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff9900;
+}
+
+main {
+  padding: 30px 0;
+  text-align: center;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  padding: 15px;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-item .price {
+  color: #e67e22;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.add-to-cart {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #2ecc71;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+img src{
+    width: 50px;
+    height: 60px;
+    max-width: 80%;
+    box-shadow: 5px;
+}
+    </style>
+<body>
+    <!-- Navigation Bar -->
+    <!-- <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="https://img.freepik.com/premium-vector/ecommerce-logo-design_624194-145.jpg"alt="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </nav> -->
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">
+        <img src="https://static.vecteezy.com/system/resources/previews/006/547/178/original/creative-modern-abstract-ecommerce-logo-design-colorful-gradient-online-shopping-bag-logo-design-template-free-vector.jpg"/>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/cart">Cart (0)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content (Body of the Website) -->
+  <main>
+    <section id="products">
+      <h2>Featured Products</h2>
+      <div class="product-list">
+        <!-- Product 1 -->
+        <div class="product-item">
+          <img src="http://farm6.staticflickr.com/5523/11955439695_8ebc90349b_h.jpg" alt="Product 1">
+          <h3>Product 1</h3>
+          <p class="price">$19.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-item">
+          <img src="https://www.logodesignteam.com/images/portfolio-images/food-beverages-logo-design/food-beverages-logo-design-new10.jpg" alt="Product 2">
+          <h3>Product 2</h3>
+          <p class="price">$29.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-item">
+          <img src="https://static.vecteezy.com/system/resources/previews/019/470/254/non_2x/delicious-pizza-burger-creative-monogram-illustration-vector.jpg" alt="Product 3">
+          <h3>Product 3</h3>
+          <p class="price">$39.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartCounter = document.querySelector('a[href="/cart"]');
+    let cartCount = 0;
+  
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        cartCount++;
+        cartCounter.textContent = `Cart (${cartCount})`;
+        alert('Product added to cart!');
+      });
+    });
+  });
+</script>
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 E-Commerce Site. All Rights Reserved.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s ease;
+        }
+
+        #colorButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #colorButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to My Interactive Website</h1>
+    <p>Click the button to change the background color!</p>
+    <button id="colorButton">Change Background Color</button>
+
+    <script>
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Get the button element
+        const button = document.getElementById('colorButton');
+
+        // Add click event listener to the button
+        button.addEventListener('click', () => {
+            // Change the background color of the body to a random color
+            document.body.style.backgroundColor = getRandomColor();
+        });
+        // var age = 4;
+        // if(age>2){
+        //     console.log('You are not a kid');
+        // }
+        // else{
+        //     console.log('You are a kid');
+        // }
+        // var arr = [1, 2, 3, 4, 5, 6, 7];
+        // console.log(arr);
+        let myDate = new Date();
+        console.log(myDate.getTime());
+        console.log(myDate.getFullYear());
+        console.log(myDate.getDay());
+        console.log(myDate.getMinutes());
+        console.log(myDate.getHours());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new form</title>
+</head>
+<style>
+</style>
+<body>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="name" id="name"name="name"placeholder="enter your name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email"id="email"name="email"placeholder="example@example.com"><br><br>
+        <label for="PRN">PRN:</label>
+        <input type="PRN"id="PRN"name="PRN"placeholder="enter your PRN"><br><br>
+        <label for="Father's Name">Father's Name:</label>
+        <input type="Father's Name"id="Father's Name"name="Father's Name"placeholder="enter your Father's Name"><br><br>
+        <label for="Mother's Name">Mother's Name:</label>
+        <input type="Mother's Name"id="Mother's Name"name="Mother's Name"placeholder="enter your Mother's Name"><br><br>
+        <label for="Address">Address:</label>
+        <input type="Address"id="Address"name="Address" size="100"><br><br>
+        <label for="city">Select a City:</label>
+        <select id="city"name="city">
+            <option value=" " disabled selected>Select a City</option>
+            <option value="Madhubani">Madhubani</option>
+            <option value="Darbhanga">Darbhanga</option>
+            <option value="Muzaffarpur">Muzaffarpur</option>
+            <option value="Patna">Patna</option>
+            <option value="Saharsa">Saharsa</option>
+            <option value="Bhagalpur">Bhagalpur</option>
+        </select><br><br>
+        <label for="state">Select a State:</label>
+        <select id="State"name="State">
+            <option value=" " disabled selected>Select a State</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Maharashatra">Pune</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="uttar Pradesh">Uttar Pradesh</option>
+            <option value="Punjab">Punjab</option>
+        </select><br><br>
+        <label for="caste">Caste:</label>
+        <select id="caste"name="caste">
+            <option value=" " disabled selected>select a caste</option>
+            <option value="General">General</option>
+            <option value="OBC">OBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" value="date" name="date"><br><br>
+        <!-- <label for="gender">Gender:</label> -->
+        <!-- <select id="gender"name="gender" required>
+            <option value=" "disabled selected>select a gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            <option value="Prefer not to say">Prefer not to say</option> -->
+        </select><br><br>
+        <label for="Select your gender">Select your gender:</label><br>
+            <label for="Male">Male</label>
+            <input type="radio" id="Male" name="Male" value="Male">
+            <label for="Female">Female</label><br>
+            <input type="radio" id="Female" name="Female" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label><br><br>
+            <label for="fav vehicle">Choose your favorite vehicle:</label><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label><br><br>
+            <label for="upload photo">upload photo: </label>
+            <input type="file"> 
+            <input type="submit"value="Submit Form">     
+    </form>
+</body>
+</html>

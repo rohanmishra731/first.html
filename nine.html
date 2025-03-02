@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adorable Calculator</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000022;
+    margin: 0;
+}
+.calculator {
+    background-color: #000331;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 320px;
+}
+
+.display {
+    background-color: #034945;
+    color: #fff;
+    font-size: 2em;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.btn {
+    background-color: #034945;
+    color: #e3e2e2;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.4em;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #105;
+}
+.btn:nth-child(5), .btn:nth-child(10), .btn:nth-child(15), .btn:nth-child(7), .btn:nth-child(10), .btn:nth-child(13)  , .btn:nth-child(6), .btn:nth-child(9), .btn:nth-child(11) , .btn:nth-child(14) {
+    background-color: #583500;
+}
+.btn:nth-child(5):hover, .btn:nth-child(10):hover, .btn:nth-child(15):hover, .btn:nth-child(7):hover, .btn:nth-child(10):hover, .btn:nth-child(13):hover, .btn:nth-child(6):hover, .btn:nth-child(9):hover, .btn:nth-child(11):hover, .btn:nth-child(14):hover {
+    background-color: #7c5519;
+}
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn" onclick="clearDisplay()">AC</button>
+            <button class="btn" onclick="deleteOperation()">DEL</button>
+            <button class="btn" onclick="appendOperation('%')">%</button>
+            <button class="btn" onclick="appendOperation('/')">/</button>
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn" onclick="appendOperation('*')">x</button>
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn" onclick="appendOperation('-')">-</button>
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn" onclick="appendOperation('+')">+</button>
+            <button class="btn" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="appendNumber('00')">00</button>
+            <button class="btn" onclick="appendNumber('.')">.</button>
+            <button class="btn" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script>
+let display = document.getElementById('display');
+let currentInput = '';
+let currentOperation = null;
+function clearDisplay() {
+    currentInput = '';
+    currentOperation = null;
+    display.innerText = '0';
+}
+function appendNumber(number) {
+    if (currentInput === '0') {
+        currentInput = number;
+    } else {
+        currentInput += number;
+    }
+    display.innerText = currentInput;
+}
+function appendOperation(operation) {
+    if (currentInput === '' && operation !== '-') {
+        return;
+    }
+    if (currentOperation !== null) {
+        calculate();
+    }
+    currentInput += ` ${operation} `;
+    currentOperation = operation;
+    display.innerText = currentInput;
+}
+function calculate() {
+    try {
+        const result = eval(currentInput);
+        display.innerText = result;
+        currentInput = result.toString();
+        currentOperation = null;
+    } catch {
+        display.innerText = 'Error';
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(22, 0, 36);
+    color: white;
+}
+img{
+    flex-wrap: wrap;
+    width: 30%;
+    height: auto;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    background-color: rgb(17, 16, 16);
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    margin-inline: 22px;
+}
+ul li a:hover{
+    color: rgb(0, 140, 255);
+    border-bottom: 2px solid rgb(0, 140, 255);
+}
+
+#bar{
+    display: none;
+}
+
+.logo{
+    font-size: 22px;
+
+}
+
+.logo span{
+    color: rgb(0, 170, 255);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 105px;
+    align-items: center;
+}
+.mainText h1{
+    font-size: 50px;
+
+}
+.mainText span{
+    color: rgb(0, 153, 255);
+}
+
+.mainText h3{
+    font-size: 28px;
+}
+.mainText p{
+    font-size: 30px;
+}
+.mainText button{
+    width: 140px;
+    height: 40px;
+    background-color: rgb(0, 157, 255);
+    font-size: 19px;
+    border: none;
+    margin-top: 24px;
+    color: white;
+}
+
+.main img
+button:hover{
+    border: 2px solid rgb(0, 149, 255);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.head{
+    text-align: center;
+    padding: 80px;
+}
+
+.head span{
+    color: rgb(0, 140, 255);
+}
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(28, 28, 28);
+    padding: 22px;
+}
+.about img{
+    width: 250px;
+    border-radius: 50px;
+    border: 4px solid rgb(0, 136, 255);
+    margin-inline: 65px;
+}
+.aboutText p{
+    margin-top: 22px;
+}
+.aboutText h2 span{
+    color: rgb(0, 140, 255);
+}
+.aboutText p span{
+    color: rgb(218, 218, 218);
+}
+.aboutText h2{
+    font-size: 30px;
+}
+
+.service{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 250px;
+    padding: 22px;
+    background-color: rgb(34, 34, 34);
+    margin-inline: 20px;
+    border-radius: 5px;
+}
+.card p{
+    margin-top: 11px;
+}
+.card i{
+    font-size: 26px;
+}
+.myWork{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.workCard{
+    width: 300px;
+    height: 310px;
+    background-color: #1c1b1b;
+    border-radius: 5px;
+    margin-inline: 20px;
+    padding: 11px;
+    margin-top: 22px;
+}
+.workCard img{
+    width: 100%;
+    height: 200px;
+}
+.workCard p{
+    margin-top: 11px;
+}
+.workCard a{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 20px;
+    padding: 6px 12px;
+    background-color: rgb(0, 128, 255);
+    color: white;
+}
+.contact{
+    width: 300px;
+    padding: 20px;
+    background-color: #252525;
+    margin: auto;
+}
+.contact input{
+    width: 90%;
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    margin-top: 3px;
+}
+.contact p{
+    margin-top: 20px;
+}
+.contact button{
+    width: 90px;
+    height: 28px;
+    background-color: rgb(0, 145, 255);
+    color: white;
+    font-size: 17px;
+    border: none;
+    margin-top: 22px;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    margin-top: 66px;
+    background-color: rgb(52, 51, 51);
+    
+    ul li{
+        list-style: none;
+        position: relative;
+        top: -10px;
+        right: -250px;
+    }
+    
+    ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 19px;
+        margin-inline: 22px;
+    }
+    ul li a:hover{
+        color: rgb(0, 140, 255);
+        border-bottom: 2px solid rgb(0, 140, 255);
+    }
+     ul li p{
+        position: relative;
+        bottom: -35px;
+        left: -710px;
+     }  
+}
+.text{
+    margin-top: 20px;
+}
+.text li{
+    margin-top: 12px;
+}
+@media screen and (max-width:100px){
+    .main{
+        display: block;
+        text-align: center;
+        margin-top: 155px;
+    }
+}
+@media screen and (max-width:800px){
+    ul{
+        display: none;
+    }
+    .showData{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px;
+        background-color: rgb(60, 59, 59);
+        gap: 20px;
+        border-radius: 5px;
+        position: fixed;
+        top: 75px;
+        right: 3%;
+    }
+    #bar{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width:800px){
+    .mainText h1{
+        font-size: 36px;
+    }
+    .mainText p{
+        font-size: 21px;
+    }
+    .main img{
+        width: 90%;
+    }
+    .contact{
+        width: 80%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>PORT<span>FOLIO</span></h1>
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="About">About</a></li>
+                <li><a href="Skills"> Skills</a></li>
+                <li><a href="Projects">Projects</a></li>
+                <li><a href="Contact">Contact</a></li>
+            </ul>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </nav>
+
+        <div class="main">
+            <div class="mainText">
+                <h3>Heyyy, I am</h3>
+                <h1><span>Rohan</span></h1> 
+                <h2>and I am Passionate</h2> 
+                <h1><span>Web Developer</span></h1>
+                <button id="cvBtn">DownLoad CV</button>
+
+               
+            </div>
+            <img src="bg.png" alt="">
+        </div>
+
+        <div class="aboutus" id="about">
+            <div class="head">
+                <h1>About <span>Us</span></h1>
+            </div>
+            <div class="about">
+                <img src="developer.png" alt="">
+                <div class="aboutText">
+                    <h2>Web <span>Developer</span></h2>
+                    <p>Experiences : <span>Fresher</span> </p>
+                    <p>Speciality : <span>Website Devlopment</span> </p>
+                    <p>Email : <span>mishrarohan161@gmail.com</span> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="services" id="service">
+            <div class="head">
+                <h1>My <span>Skills</span></h1>
+            </div>
+            <div class="service">
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>I have web development knowledge, which involves creating and styling web pages using HTML for
+                        structure, CSS for presentation and layout, and JavaScript for adding interactivity and dynamic
+                        behavior. These skills enable me to build visually appealing and functional websites.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>C/C++</h3>
+                    <p>With a solid foundation in C and C++, I already have a strong grasp of programming fundamentals
+                        such as data structures, and algorithmic problem-solving. These skills are valuable for
+                        understanding lower-level system operations and enhancing my efficiency in writing optimized
+                        code.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>MS Office</h3>
+                    <p>I have knowledge in MS Office, which includes proficiency in Word for document creation and
+                        editing, Excel for data analysis and spreadsheet management, PowerPoint for creating engaging
+                        presentations, and Outlook for email communication and scheduling. This skill set enables me to
+                        efficiently handle various administrative and professional tasks.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="works" id="works">
+            <div class="head">
+                <h1>My <span>Projects</span></h1>
+
+            </div>
+            <div class="myWork">
+                <div class="workCard">
+                    <img src="" alt="">
+                    <p>Calculator</p>
+                    <a href="calculator.png" >checkout</a>
+                </div>
+                <div class="workCard">
+                    <img src="" alt="">
+                    <p>Landing Page</p>
+                    <a href="landing.png" target="_blank">checkout</a>
+                </div>
+                <div class="workCard">
+                    <img src="" alt="">
+                    <p>Portfolio</p>
+                    <a href="portfolio.png" target="_blank">checkout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="connect" id="connect">
+            <div class="head">
+                <h1>Contact <span>Us</span></h1>
+            </div>
+            <div class="contact">
+                <p>Email : </p>
+                <input type="text" placeholder="Enter Email" id="email">
+                <p>Password : </p>
+                <input type="password" placeholder="Enter Password" id="pass">
+                <p>Message : </p>
+                <input type="text" placeholder="Enter Message" id="msg">
+                <button id="submit">submit</button>
+            </div>
+        </div>
+        <div class="footer">
+                <ul>
+                    <li><a href="">YouTube</a></li>
+                    <li><a href="">WhatsApp</a></li>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Twitter</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Skype</a></li>
+                    <li><a href="">Call Me</a></li>
+                </ul>
+                <ul>
+                    <li><p>&copy; 2024 Mishra Rohan.All rights reserved</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Video Editor', 'Web Designer', 'Graphics Designer'],
+            typeSpeed: 50,
+        });
+        let cvBtn = document.getElementById("cvBtn");
+let submit = document.getElementById("submit");
+let bar = document.getElementById("bar");
+
+cvBtn.addEventListener("click", function(){
+    alert("Downloded succesfully")
+})
+
+
+submit.addEventListener("click", function(){
+
+    let email = document.getElementById("email");
+    let pass = document.getElementById("pass");
+
+    if(email.value == "" && pass.value == ""){
+        alert("Fill Detail")
+    }else{
+        alert("Logged IN")
+    }
+})
+
+let ul = document.querySelector("ul");
+bar.addEventListener("click", function(){
+    ul.classList.toggle("showData");
+
+    if(ul.className == "showData"){
+        bar.className= "fa-solid fa-xmark"
+    }else{
+        bar.className= "fa-solid fa-bars"
+    }
+})
+    </script>
+
+</body>
+
+</html>
